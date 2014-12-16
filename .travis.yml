@@ -1,0 +1,14 @@
+node_js:
+	- "0.10"
+
+language: node_js
+
+before_script:
+	- npm install -g gulp bower tsd@next typescript karma-cli
+	- npm install
+	- bower install
+	- tsd reinstall
+
+script: 
+	- gulp 
+	- gulp test
