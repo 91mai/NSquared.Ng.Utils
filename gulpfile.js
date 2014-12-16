@@ -38,7 +38,16 @@ gulp.task('bundle', ['clean'], function() {
 gulp.task('test', ['bundle'], function (done) {
   karma.start({
     configFile: __dirname + '/karma.conf.js',
-    singleRun: true
+    singleRun: true    
+  }, done);
+});
+
+//// Test
+gulp.task('testForCI', ['bundle'], function (done) {
+  karma.start({
+    configFile: __dirname + '/karma.conf.js',
+    singleRun: true,
+    browsers: ['Firefox']
   }, done);
 });
 
