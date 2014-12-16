@@ -3,6 +3,9 @@ var tsc = require('gulp-tsc');
 var clean = require('gulp-clean');
 var karma = require('karma').server;
 var install = require("gulp-install");
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
+var rename = require('gulp-rename');
 
 //// Config
 var config = {
@@ -16,15 +19,23 @@ gulp.task('clean', function () {
       .pipe(clean({ force: true }));
 });
 
-//// TypeScript
-gulp.task('typescript', function() {	
-    gulp.src([config.sourceFolder + '**/*.ts'])
+//// Bundle
+gulp.task('bundle', ['clean'], function() {
+    return gulp.src(
+      [config.sourceFolder + 'module.ts',
+       config.sourceFolder + '**/*.ts'])
       .pipe(tsc())
+      .pipe(concat('nsquared-ng-utils.js'))
+      .pipe(gulp.dest(config.destFolder))
+      .pipe(uglify())
+      .pipe(rename({
+            suffix: '.min'
+        }))
       .pipe(gulp.dest(config.destFolder));
 });
 
 //// Test
-gulp.task('test', function (done) {
+gulp.task('test', ['bundle'], function (done) {
   karma.start({
     configFile: __dirname + '/karma.conf.js',
     singleRun: true
@@ -37,4 +48,4 @@ gulp.task('install', function() {
   .pipe(install()); 
 });
 
-gulp.task('default', ['clean','typescript']);
+gulp.task('default', ['bundle']);
