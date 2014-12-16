@@ -8,10 +8,16 @@ Some useful directive of filter for angularjs.
 
 		npm install -g gulp bower tsd@next typescript karma-cli
 
-1. Install dependency
+1. Install `node` dependency
 
 		npm install
+
+1. Install `bower` dependency
+
 		bower install
+
+1. Install `tsd` dependency (TypeScript definition files)
+
 		tsd install
 	or
 
