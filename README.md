@@ -4,9 +4,9 @@ Some useful directive of filter for angularjs.
 
 ## Usage
 
-1. Install the required tools: `gulp`, `bower`			
+1. Install the required tools: `gulp`, `bower`, `tsd`			
 
-		npm install -g gulp bower		
+		npm install -g gulp bower tsd@next		
 
 1. Install dependency
 
