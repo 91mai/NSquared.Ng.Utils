@@ -1,4 +1,4 @@
-# NSquared.Ng.Utils
+# NSquared.Ng.Utils [![Build Status](https://travis-ci.org/91mai/NSquared.Ng.Utils.svg?branch=master)](https://travis-ci.org/91mai/NSquared.Ng.Utils)
 
 Some useful directive of filter for angularjs.
 
