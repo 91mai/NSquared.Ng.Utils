@@ -18,7 +18,7 @@ Some useful directive of filter for angularjs.
 
 1. Install `tsd` dependency (TypeScript definition files)
 
-		tsd install
+		tsd reinstall
 	or
 
 		tsd install angular
