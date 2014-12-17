@@ -14,7 +14,7 @@ describe('Reverse Filter', function () {
 
   it('should reverse an array', function () {
     // Arrange.
-    var array = [1, 2, 3, 4, 5]
+    var array = [1, 2, 3, 4, 5];
 
     // Act.
     var result = $filter('nsReverse')(array, 'NSquared.Ng.Utils');    
