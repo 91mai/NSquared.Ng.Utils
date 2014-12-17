@@ -1,8 +1,6 @@
 language: node_js
-
 node_js:
-- "0.10"
-
+- '0.10'
 before_script:
 - npm install -g gulp bower tsd@next typescript karma-cli
 - npm install
@@ -10,9 +8,11 @@ before_script:
 - tsd reinstall
 - export DISPLAY=:99.0
 - sh -e /etc/init.d/xvfb start
-
-script: 
+script:
 - gulp testForCI
-
 after_script:
 - gulp coveralls
+notifications:
+  hipchat:
+    rooms:
+      secure: kzIdD8lcPJsJLpx5vZpU2GTJn7B7Gs1aSjZFqfaPrgxU4bUPkUhTlTq7pp/oUtqrG/DyaMEH0JUjroItRu/PphsVN0dwUmCWwA1J6ARU0oAIkT3Ifhm31Q9YuZC7N8dck79VZXy0tWqAcZIBIKOFPiCGJ5uKR3qHWIhq1Rmw1C0=
