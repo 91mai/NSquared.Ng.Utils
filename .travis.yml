@@ -13,3 +13,6 @@ before_script:
 
 script: 
 - gulp testForCI
+
+after_script:
+- gulp coveralls

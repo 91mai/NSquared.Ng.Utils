@@ -6,6 +6,7 @@ var install = require("gulp-install");
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
+var coveralls = require('gulp-coveralls');
 
 //// Config
 var config = {
@@ -55,6 +56,12 @@ gulp.task('testForCI', ['bundle'], function (done) {
 gulp.task('install', function() {
    gulp.src(['./bower.json', './package.json', './tsd.json'])
   .pipe(install()); 
+});
+
+//// Coverage
+gulp.task('coveralls', function(){
+  return gulp.src('coverage/**/lcov.info')
+  .pipe(coveralls());
 });
 
 gulp.task('default', ['bundle']);
