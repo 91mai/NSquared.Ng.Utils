@@ -16,7 +16,7 @@ module.exports = function(config) {
     files: [
       'bower_components/angular/angular.js',
       'bower_components/angular-mocks/angular-mocks.js', 
-      'dest/nsquared-ng-utils.min.js',      
+      'dest/nsquared-ng-utils.js',      
       'test/**/*.spec.js'
     ],
 
@@ -32,7 +32,7 @@ module.exports = function(config) {
       // source files, that you wanna generate coverage for
       // do not include tests or libraries
       // (these files will be instrumented by Istanbul)
-      'src/**/*.js': ['coverage']
+      'dest/nsquared-ng-utils.js': ['coverage']
     },
 
 
@@ -43,7 +43,7 @@ module.exports = function(config) {
 
     // optionally, configure the reporter
     coverageReporter: {
-      type : 'lcovonly',
+      type : 'lcov',
       dir : 'coverage/'
     },
 
