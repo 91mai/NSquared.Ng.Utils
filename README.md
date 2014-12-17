@@ -1,4 +1,6 @@
-# NSquared.Ng.Utils [![Build Status](https://travis-ci.org/91mai/NSquared.Ng.Utils.svg?branch=master)](https://travis-ci.org/91mai/NSquared.Ng.Utils)[![Coverage Status](https://coveralls.io/repos/91mai/NSquared.Ng.Utils/badge.png?branch=master)](https://coveralls.io/r/91mai/NSquared.Ng.Utils?branch=master)
+# NSquared.Ng.Utils 
+[![Build Status](https://travis-ci.org/91mai/NSquared.Ng.Utils.svg?branch=master)](https://travis-ci.org/91mai/NSquared.Ng.Utils)
+[![Coverage Status](https://coveralls.io/repos/91mai/NSquared.Ng.Utils/badge.png?branch=master)](https://coveralls.io/r/91mai/NSquared.Ng.Utils?branch=master)
 
 Some useful directive of filter for angularjs.
 
