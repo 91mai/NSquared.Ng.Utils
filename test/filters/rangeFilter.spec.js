@@ -15,7 +15,7 @@ describe('Range Filter', function () {
 
     it('should create a range', function () {
 
-        /*var emptyAry = function(){
+        var emptyAry = function(){
             return [];
         };
 
@@ -25,7 +25,7 @@ describe('Range Filter', function () {
         };
 
         // Assert.
-        expect(act.useStringParameter1).toEqual('a');*/
+        expect(act.useStringParameter1).toEqual('a');
 
     });
 

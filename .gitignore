@@ -3,3 +3,7 @@ bower_components
 typings
 .idea/
 coverage/
+src/directives/*.map
+src/directives/*.js
+src/filters/*.map
+src/filters/*.js
